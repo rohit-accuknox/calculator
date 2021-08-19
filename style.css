@@ -210,3 +210,20 @@ body {
 .app {
     min-height: 95vh
 }
+
+.tag {
+    display: flex;
+    float: right;
+    padding: 10px;
+    background: rgb(247, 191, 191);
+    border: 2px solid black;
+    margin: 10px;
+}
+
+#history {
+    padding: 10px;
+    background: #fff;
+    border: 2px solid black;
+    margin: 10px;
+    display: inline-block;
+}
