@@ -14,10 +14,29 @@
     <div class="app">
 
         <div class="container">
-            <div onclick="History()" class="tag">
-                <a>History</a>
+            <div onclick="History()" id="his" class="tag">
+                History
             </div>
-            <div id="history"></div>
+            <div id="history">
+                <b>Mixed</b>
+                <div id="mixedHistory"></div>
+                <b>Addition</b>
+                <div id="addHistory"></div>
+                <b>Substraction</b>
+                <div id="subHistory"></div>
+                <b>Multiplication</b>
+                <div id="mulHistory"></div>
+                <b>Division</b>
+                <div id="divHistory"></div>
+                <div class="tag" onclick="clearLocalStorage()">
+                    Clear History
+                </div>
+            </div>
+            <!-- <div id="history"></div>
+            <div id="addHistory"></div>
+            <div id="subHistory"></div>
+            <div id="mulHistory"></div>
+            <div id="divHistory"></div> -->
             <div class="calculator">
                 <div class="result">
                     <div id="calculate"></div>
@@ -40,7 +59,7 @@
                 </div>
                 <div class="ops">
                     <button class="btn btn-dark operation" value="DEL">DEL</button>
-                    <button class="btn btn-dark operation" value="C" ondblclick="clearLocalStorage()">C</button>
+                    <button class="btn btn-dark operation" value="C">C</button>
                     <button class="btn btn-dark operation" value="/">/</button>
                     <button class="btn btn-dark operation" value="*">X</button>
                     <button class="btn btn-dark operation" value="-">-</button>
