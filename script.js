@@ -2,10 +2,9 @@ let calculate = document.getElementById("calculate");
 document.getElementById("history").style.display = "none";
 buttons = document.querySelectorAll("button");
 
-// let calculateValue ="";
 let historyData = [];
 let expressionData = "";
-let resultData = "";
+let result = "";
 let addData = [];
 let subData = [];
 let mulData = [];
@@ -24,30 +23,6 @@ for (item of buttons) {
       if (history.style.display === "block") {
         history.style.display = "none";
       }
-      // let addHistory = document.getElementById("addHistory");
-      // if (addHistory.style.display === "none") {
-      //   addHistory.style.display = "none";
-      // } else {
-      //   addHistory.style.display = "none";
-      // }
-      // let subHistory = document.getElementById("subHistory");
-      // if (subHistory.style.display === "none") {
-      //   subHistory.style.display = "none";
-      // } else {
-      //   subHistory.style.display = "none";
-      // }
-      // let mulHistory = document.getElementById("mulHistory");
-      // if (mulHistory.style.display === "none") {
-      //   mulHistory.style.display = "none";
-      // } else {
-      //   mulHistory.style.display = "none";
-      // }
-      // let divHistory = document.getElementById("divHistory");
-      // if (divHistory.style.display === "none") {
-      //   divHistory.style.display = "none";
-      // } else {
-      //   divHistory.style.display = "none";
-      // }
     } else if (buttonText == "DEL") {
       newValue = calculate.innerText.slice(0, -1);
       calculate.innerText = newValue;
@@ -117,15 +92,6 @@ for (item of buttons) {
           result = "";
           expressionData = "";
         }
-        // expressionData = calculateValue;d
-        // resultData = calculate.innerText; d
-        // resultData = result;
-        // historyData.push(expressionData + "=" + resultData);
-        // localStorage.setItem("history", JSON.stringify(historyData));
-        // console.log(historyData);
-        // resultData = "";
-        // expressionData = "";
-        // History();d
       } catch {
         calculate.innerText = "ERROR";
       }
@@ -137,11 +103,7 @@ for (item of buttons) {
 }
 
 let History = () => {
-  // let his = document.getElementById("his");
-  // let x = JSON.parse(localStorage.getItem("history"));
-  // his.innerText = x;
   let targetDiv = document.getElementById("history");
-  // let history = document.getElementById("his");
   if (targetDiv.style.display !== "block") {
     targetDiv.style.display = "block";
   } else {
@@ -152,46 +114,6 @@ let History = () => {
   subHistory.innerText = JSON.parse(localStorage.getItem("sub"));
   mulHistory.innerText = JSON.parse(localStorage.getItem("mul"));
   divHistory.innerText = JSON.parse(localStorage.getItem("div"));
-
-  // if (history.style.display === "none") {
-  //   history.style.display = "block";
-  // } else {
-  //   history.style.display = "none";
-  // }
-
-  // let addHistory = document.getElementById("addHistory");
-  // let addHis = JSON.parse(localStorage.getItem("add"));
-  // addHistory.innerText = addHis;
-  // if (addHistory.style.display === "none") {
-  //   addHistory.style.display = "block";
-  // } else {
-  //   addHistory.style.display = "none";
-  // }
-
-  // let subHistory = document.getElementById("subHistory");
-  // let subHis = JSON.parse(localStorage.getItem("sub"));
-  // subHistory.innerText = subHis;
-  // if (subHistory.style.display === "none") {
-  //   subHistory.style.display = "block";
-  // } else {
-  //   subHistory.style.display = "none";
-  // }
-  // let mulHistory = document.getElementById("mulHistory");
-  // let mulHis = JSON.parse(localStorage.getItem("mul"));
-  // mulHistory.innerText = mulHis;
-  // if (mulHistory.style.display === "none") {
-  //   mulHistory.style.display = "block";
-  // } else {
-  //   mulHistory.style.display = "none";
-  // }
-  // let divHistory = document.getElementById("divHistory");
-  // let divHis = JSON.parse(localStorage.getItem("div"));
-  // divHistory.innerText = divHis;
-  // if (divHistory.style.display === "none") {
-  //   divHistory.style.display = "block";
-  // } else {
-  //   divHistory.style.display = "none";
-  // }
 };
 
 let clearLocalStorage = () => {
@@ -200,5 +122,5 @@ let clearLocalStorage = () => {
 
   if (targetDiv.style.display == "block") {
     targetDiv.style.display = "none";
-  } 
+  }
 };
